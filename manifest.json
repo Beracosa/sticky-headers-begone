@@ -1,0 +1,46 @@
+{
+
+  "manifest_version": 2,
+  "name": "Sticky Headers Begone",
+  "version": "1.0",
+
+  "description": "Remove sticky headers for supported sites.",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.google.com/search?*"],
+      "js": ["google_unsticky.js"]
+    },
+	
+	{
+      "matches": ["*://*.google.ca/search?*"],
+      "js": ["google_unsticky.js"]
+    },
+	
+	{
+      "matches": ["*://*.stackoverflow.com/*"],
+      "js": ["stackoverflow_unsticky.js"]
+    },
+	
+	{
+      "matches": ["*://*.mangadex.org/*"],
+      "js": ["mangadex_unsticky.js"]
+    },
+	
+	{
+      "matches": ["*://*.w3schools.com/*"],
+      "js": ["w3schools_unsticky.js"]
+    },
+	
+	{
+      "matches": ["*://*.quora.com/*"],
+      "js": ["quora_unsticky.js"]
+    }
+	
+  ],
+
+  "icons": {
+    "48": "icons/border-48.png"
+  }
+
+}
